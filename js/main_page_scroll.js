@@ -16,7 +16,7 @@ function showSlides() {
 
   slides[slideIndex - 1].classList.add("show"); 
 
-  setTimeout(showSlides, 3000); // Change the slide every 3 seconds (3000 milliseconds)
+  setTimeout(showSlides, 3000);
 }
 
 
