@@ -100,109 +100,231 @@ header {
     color: #000;
   }
 
+  /* menu-trigger */
 
-  @media (max-width: 768px) {
-    header .sub-menu ul.menu li a {
-      font-size: 0.9rem;
-    }
+  input[id="icon"] {
+    display:none;
+  } 
+  
+  input[id="icon"] + label{
+    position: relative;
+    display:block;
+    width:60px;
+    height:35px;
+    cursor:pointer;
+  } 
+  
+  input[id="icon"] + label > span {
+    position: absolute;
+    display:block;
+    width:70%;
+    height:5px;
+    border-radius:30px;
+    background:#000;
+    transition: all 0.35s;
+    z-index:2;
   }
   
-  @media (max-width: 480px) {
-    header .sub-menu ul.menu li a {
-      font-size: 0.8rem;
-    }
+  input[id="icon"] + label > span:nth-child(1) {
+    top:0px;
   }
+  
+  input[id="icon"] + label > span:nth-child(2) {
+    top:50%;
+    transform: translateY(-50%);  
+  }
+  
+  input[id="icon"] + label > span:nth-child(3) {
+    bottom:0px;
+  }
+  
+  input[id="icon"]:checked + label > span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+  }
+  
+  input[id="icon"]:checked + label > span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  input[id="icon"]:checked + label > span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+  }
+  
+  .menu-category ul {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+  }
+  
+  .menu-category ul li {
+    margin: 20px 0;
+  }
+  
+  .menu-category ul li a{
+    color: #ffffff;
+  }
+  
+  #icon + label + .menu-category {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.7);
+    top: -100%;
+    padding: 60px 25px 25px 25px;
+    box-sizing: border-box;
+    left: 0;
+    z-index: 1;
+    transition: all 0.35s;
+  }
+  
+  #icon:checked + label + .menu-category {
+    top:0px;
+  }
+  
 
 
   /* 프로젝트 페이지 슬라이드 */
 
 
 .container{
+  margin-top: 200px;
   width: 100%;
-  height: 500px;
-  background-color: red;
+  height: 600px;
 }
 
-#slideShow{
-  width: 80%;
-  height: 500px;
-  position: relative;
-  margin: 50px auto;
-  overflow: hidden;  
-  /*리스트 형식으로 이미지를 일렬로 
-  정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은
-  hidden으로 숨겨줘야됨*/
+.container2{
+  margin-top: 100px;
+  width: 100%;
+  height: 600px;
 }
 
-
-.slides{
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%; /* 슬라이드할 사진과 마진 총 넓이 */
-  transition: left 0.5s ease-out; 
-  /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+.carousel-wrapper, .carousel-wrapper2{
+  overflow: hidden;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 
-.slides ul{
-  background-color: yellow;
-}
-
-.slides li img {
+.carousel-wrapper .carousel img, .carousel-wrapper2 .carousel img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* 첫 번째 슬라이드 가운데에 정렬하기위해
-첫번째 슬라이드만 margin-left조정 */
-.slides li:first-child{
-  margin-left: 100px;
+.carousel-wrapper, .carousel-wrapper2 * {
+  box-sizing: border-box;
 }
 
-/* 슬라이드들 옆으로 정렬 */
-.slides li:not(:last-child){
-  float: left;
-  margin-right: 100px;
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-.slides li{
-  float: left;
+.carousel_item {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 100;
+  transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 }
 
-.controller span{
-  position:absolute;
-  background-color: transparent;
-  color: black;
-  text-align: center;
-  border-radius: 50%;
-  padding: 10px 20px;
+.carousel_item.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carousel_item.prev,
+.carousel_item.next {
+  z-index: 800;
+}
+
+.carousel_item.prev {
+  transform: translateX(-100%);
+}
+
+.carousel_item.next {
+  transform: translateX(100%);
+}
+
+.carousel_button--prev,
+.carousel_button--next {
+  position: absolute;
   top: 50%;
-  font-size: 1.3em;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 1001;
+  border: 1px solid lightgray;
 }
 
-/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
-.controller span:hover{
-  background-color: rgba(128, 128, 128, 0.11);
-}
-
-.prev{
+.carousel_button--prev {
   left: 10px;
 }
 
-/* 이전 화살표에 마우스 커서가 올라가 있을때 
-이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
-.prev:hover{
-  transform: translateX(-10px);
-}
-
-.next{
+.carousel_button--next {
   right: 10px;
 }
 
-/* 다음 화살표에 마우스 커서가 올라가 있을때 
-이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
-.next:hover{
-  transform: translateX(10px);
+.carousel_button--prev::after,
+.carousel_button--next::after {
+  content: ' ';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel_button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  header .sub-menu ul.menu li a {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header .sub-menu ul.menu li a {
+    font-size: 1.0rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header .sub-menu ul.menu li a {
+    font-size: 0.9rem;
+    display: none;
+  }
+
+  header .sub-menu ul.menu li::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .menu-trigger {
+    display: none;
+  }
 }
