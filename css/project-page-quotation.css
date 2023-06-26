@@ -1,0 +1,164 @@
+.allContainer {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  /* display: block; */
+}
+input:focus {
+  outline: none;
+}
+
+/* 이름 */
+.name-group {
+  margin-bottom: 4vh;
+}
+
+.name-group > .textName-control {
+  margin-bottom: 2vh;
+}
+
+.name-group > .name {
+  width: 40vw;
+}
+
+/* 연락처 */
+
+.call-group {
+  margin-bottom: 4vh;
+}
+
+.call-group > .textCall-control {
+  margin-bottom: 2vh;
+}
+
+.call-group > .callFirst,
+.call-group > .callMiddle,
+.call-group > .callEnd {
+  width: 5vw;
+}
+
+/* 주소 */
+.adress-group {
+  margin-bottom: 4vh;
+}
+
+.adress-group > .textAdress-control {
+  margin-bottom: 2vh;
+}
+
+.adress-group > .adress-input {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+.adress-group > .adress-input > .adress {
+  margin-bottom: 2vh;
+}
+
+/* 평형 */
+.equilibrium-group {
+  margin-bottom: 4vh;
+}
+
+.equilibrium-group > .textEquilibrium-control {
+  margin-bottom: 2vh;
+}
+.equilibrium-group > .equilibrium {
+  width: 40vw;
+}
+
+/* 시공예정일 */
+.constructionSchedule-group {
+  margin-bottom: 4vh;
+}
+
+.constructionSchedule-group > .textConstructionSchedule-control {
+  margin-bottom: 2vh;
+}
+
+/* 공사예산 */
+.budget-group {
+  margin-bottom: 4vh;
+}
+
+.budget-group > .textBudget {
+  margin-bottom: 2vh;
+}
+.budget-group > .budget {
+  width: 40vw;
+}
+
+/* 공사범위 */
+.checkBox-group {
+  margin-bottom: 4vh;
+}
+
+.checkBox-group > .textCheckBox-control {
+  margin-bottom: 2vh;
+}
+
+.checkBox-group {
+  display: flex;
+  flex-direction: column;
+}
+.checkBox-group input[type="checkbox"] {
+  margin-bottom: 1vh;
+}
+
+/* 내용 */
+.content-group {
+  margin-bottom: 4vh;
+}
+
+.content-group > .textContent {
+  margin-bottom: 2vh;
+}
+.content-group > .content {
+  width: 40vw;
+}
+
+/* 파일 업로드1 */
+.uploadFile1-group {
+  margin-bottom: 4vh;
+}
+
+.uploadFile1-group > .textuploadFile1 {
+  margin-bottom: 2vh;
+}
+
+/* 파일 업로드2 */
+.uploadFile2-group {
+  margin-bottom: 4vh;
+}
+
+.uploadFile2-group > .textuploadFile2 {
+  margin-bottom: 2vh;
+}
+
+/* 파일 업로드3 */
+.uploadFile3-group {
+  margin-bottom: 8vh;
+}
+
+.uploadFile3-group > .textuploadFile3 {
+  margin-bottom: 2vh;
+}
+
+/* 개인정보 수집 동의  */
+.agreement-group {
+  margin-bottom: 4vh;
+}
+
+.agreement-group > .textAgreement-control {
+  margin-bottom: 2vh;
+}
+.agreement-group > .agreement {
+  margin-bottom: 2vh;
+  width: 40vw;
+}
