@@ -8,7 +8,6 @@ input {
   border-top: none;
   border-left: none;
   border-right: none;
-  /* display: block; */
 }
 input:focus {
   outline: none;
