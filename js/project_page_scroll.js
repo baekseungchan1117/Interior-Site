@@ -79,9 +79,17 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    const carouselElement = get('.carousel')
-    const carousel = new Carousel(carouselElement)
-    carousel.initCarousel()
-    carousel.setEventListeners()
+    const carouselElement = document.querySelector('.container .carousel');
+    const carouselElement2 = document.querySelector('.container2 .carousel');
+    const carouselElement3 = document.querySelector('.container3 .carousel');
+    const carousel = new Carousel(carouselElement);
+    const carousel2 = new Carousel(carouselElement2);
+    const carousel3 = new Carousel(carouselElement3);
+    carousel.initCarousel();
+    carousel.setEventListeners();
+    carousel2.initCarousel();
+    carousel2.setEventListeners();
+    carousel3.initCarousel();
+    carousel3.setEventListeners();
   })
 })()
