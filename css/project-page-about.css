@@ -191,11 +191,11 @@ input[id="icon"]:checked + label > span:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 .input-img {
   width: 85%;
-  height: 400px;
+  height: 600px;
   background-color: gray;
 }
 
@@ -205,4 +205,34 @@ input[id="icon"]:checked + label > span:nth-child(3) {
   justify-content: center;
   text-align: center;
   margin-bottom: 100px;
+  line-height: 2;
+}
+
+@media screen and (max-width: 850px) {
+  header .sub-menu ul.menu li a {
+    font-size: 0.9rem;
+    display: none;
+  }
+
+  header .sub-menu ul.menu li::before {
+    display: none;
+  }
+  .input-img-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .input-img {
+    width: 85%;
+    height: 400px;
+    background-color: gray;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .menu-trigger {
+    display: none;
+  }
 }
