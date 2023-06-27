@@ -196,7 +196,6 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 .input-img {
   width: 85%;
   height: 600px;
-  background-color: gray;
 }
 
 .input-text {
@@ -218,16 +217,10 @@ input[id="icon"]:checked + label > span:nth-child(3) {
     display: none;
   }
   .input-img-container {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
   }
   .input-img {
-    width: 85%;
     height: 400px;
-    background-color: gray;
   }
 }
 
