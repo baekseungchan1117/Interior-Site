@@ -1,11 +1,12 @@
 /* COMMON */
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
 body {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.4;
@@ -59,8 +60,8 @@ header .sub-menu ul.menu li::before {
   height: 12px;
   background-color: #656565;
   position: absolute;
-  top: 50%; 
-  transform: translateY(-50%)
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 header .sub-menu ul.menu li:first-child::before {
@@ -82,44 +83,44 @@ header .sub-menu ul.menu li a:hover {
 /* menu-trigger */
 
 input[id="icon"] {
-  display:none;
-} 
+  display: none;
+}
 
-input[id="icon"] + label{
+input[id="icon"] + label {
   position: relative;
-  display:block;
-  width:60px;
-  height:35px;
-  cursor:pointer;
-} 
+  display: block;
+  width: 60px;
+  height: 35px;
+  cursor: pointer;
+}
 
 input[id="icon"] + label > span {
   position: absolute;
-  display:block;
-  width:70%;
-  height:5px;
-  border-radius:30px;
-  background:#ffffff;
+  display: block;
+  width: 70%;
+  height: 5px;
+  border-radius: 30px;
+  background: #ffffff;
   transition: all 0.35s;
-  z-index:2;
+  z-index: 2;
 }
 
 input[id="icon"] + label > span:nth-child(1) {
-  top:0px;
+  top: 0px;
 }
 
 input[id="icon"] + label > span:nth-child(2) {
-  top:50%;
-  transform: translateY(-50%);  
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 input[id="icon"] + label > span:nth-child(3) {
-  bottom:0px;
+  bottom: 0px;
 }
 
 input[id="icon"]:checked + label > span:nth-child(1) {
-  top:50%;
-  transform:translateY(-50%) rotate(45deg);
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 input[id="icon"]:checked + label > span:nth-child(2) {
@@ -127,8 +128,8 @@ input[id="icon"]:checked + label > span:nth-child(2) {
 }
 
 input[id="icon"]:checked + label > span:nth-child(3) {
-  bottom:50%;
-  transform:translateY(50%) rotate(-45deg);
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 
 .menu-category ul {
@@ -144,7 +145,7 @@ input[id="icon"]:checked + label > span:nth-child(3) {
   margin: 20px 0;
 }
 
-.menu-category ul li a{
+.menu-category ul li a {
   color: #ffffff;
 }
 
@@ -162,7 +163,7 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 }
 
 #icon:checked + label + .menu-category {
-  top:0px;
+  top: 0px;
 }
 
 /* 메인 화면 슬라이더 */
@@ -200,6 +201,44 @@ input[id="icon"]:checked + label > span:nth-child(3) {
   opacity: 1;
 }
 
+/* footer */
+.consulting {
+  padding: 15vh 5vw 15vh 5vw;
+  height: 30vh;
+  background-color: greenyellow;
+  color: #41783a;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.consulting p {
+  padding: 3px;
+}
+
+/* 견적상담 */
+.home-icon {
+  padding: 30px;
+}
+
+.consulting > .consulting-quotation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 전화상담 */
+.call-icon {
+  padding: 30px;
+}
+
+.consulting > .consulting-call {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
@@ -210,7 +249,7 @@ input[id="icon"]:checked + label > span:nth-child(3) {
 
 @media screen and (max-width: 1000px) {
   header .sub-menu ul.menu li a {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 }
 

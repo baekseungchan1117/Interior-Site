@@ -1,84 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="./css/main_page.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <script
+      src="https://kit.fontawesome.com/693f483c38.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/main_page.css" />
     <title>Document</title>
 
     <!-- 브라우저 초기화 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
 
     <!-- 폰트 -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header>
-        <div class="inner">
-            <a href="/" class="logo">
-                <img src="./Logo.png" alt="Logo" />
-            </a>
+      <div class="inner">
+        <a href="/" class="logo">
+          <img src="./Logo.png" alt="Logo" />
+        </a>
 
-            <div class="sub-menu">
-                <ul class="menu">
-                    <li>
-                        <a href="javascript:void(0)">About</a>
-                    </li>
-                    <li>
-                        <a href="http://127.0.0.1:5500/views/Project-Page.html">Project</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">Contact</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">Process</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">Manager</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="menu-trigger">
-                <input type="checkbox" id="icon">
-                <label for="icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-                <div class="menu-category">
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Project</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Process</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="sub-menu">
+          <ul class="menu">
+            <li>
+              <a href="javascript:void(0)">About</a>
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/views/Project-Page.html"
+                >Project</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)">Contact</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Process</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">Manager</a>
+            </li>
+          </ul>
         </div>
+
+        <div class="menu-trigger">
+          <input type="checkbox" id="icon" />
+          <label for="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <div class="menu-category">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Process</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
     <span class="slideshow-container">
-        <div class="Slidesbackground">
-            <div class="mySlides fade imgaa">
-                <img src="./images/KakaoTalk_Photo_2023-06-03-22-21-17 010.png" class="slideshow-image">
-            </div>
-            <div class="mySlides fade">
-                <img src="./images/KakaoTalk_Photo_2023-06-03-22-21-16 009.png" class="slideshow-image">
-            </div>
-            <div class="mySlides fade">
-                <img src="./images/KakaoTalk_Photo_2023-06-03-22-21-13 003.png" class="slideshow-image">
-            </div>
+      <div class="Slidesbackground">
+        <div class="mySlides fade imgaa">
+          <img
+            src="./images/KakaoTalk_Photo_2023-06-03-22-21-17 010.png"
+            class="slideshow-image"
+          />
         </div>
+        <div class="mySlides fade">
+          <img
+            src="./images/KakaoTalk_Photo_2023-06-03-22-21-16 009.png"
+            class="slideshow-image"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="./images/KakaoTalk_Photo_2023-06-03-22-21-13 003.png"
+            class="slideshow-image"
+          />
+        </div>
+      </div>
     </span>
-    <script src="./js/main_page_scroll.js"></script>
-</body>
 
+    <footer>
+      <div class="consulting">
+        <div class="consulting-quotation">
+          <span class="home-icon">
+            <i class="fa-solid fa-house fa-2xl" style="color: #41783a"></i>
+          </span>
+          <p>견적 상담</p>
+          <br />
+          <p>로고 자리에</p>
+          <p>우리집 공사를 문의해보세요</p>
+        </div>
+
+        <div class="consulting-call">
+          <span class="call-icon">
+            <i class="fa-solid fa-phone fa-2xl" style="color: #41783a"></i>
+          </span>
+          <p>전화 상담</p>
+          <br />
+          <p>미팅 상담과 실측을</p>
+          <p>전화로 예약해 보세요</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main_page_scroll.js"></script>
+  </body>
 </html>
